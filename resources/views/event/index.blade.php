@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="card mb-4">
                     <div class="card-header pb-0 d-flex justify-content-between align-items-center">
-                        <h6 class="mb-0">Events Table</h6>
+                        <h6 class="mb-0">Event Table</h6>
                         <a href="{{ route('events.create') }}" class="btn btn-primary btn-sm">Create</a>
                     </div>
 

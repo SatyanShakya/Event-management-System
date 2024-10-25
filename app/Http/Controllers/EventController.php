@@ -12,7 +12,7 @@ class EventController extends Controller
     {
         $events = Event::with('category')->get();
 
-        if ($request->wantsJson()) {
+        if ($request->query('json') == 'true') {
             return response()->json($events);
         }
 
