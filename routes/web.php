@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,5 +14,6 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::resource('events',EventController::class);
-    
+    Route::resource('categories',CategoryController::class);
+
 });

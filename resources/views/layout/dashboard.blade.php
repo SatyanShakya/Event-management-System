@@ -77,17 +77,17 @@
                         <span class="nav-link-text ms-1">Event</span>
                     </a>
                 </li>
-                 {{-- <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('skills.*') ? 'active' : '' }}"
-                        href="{{ route('skills.index') }}">
+                  <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('categories.*') ? 'active' : '' }}"
+                        href="{{ route('categories.index') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-app text-info text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Skills</span>
+                        <span class="nav-link-text ms-1">Category</span>
                     </a>
                 </li>
-                <li class="nav-item">
+              {{--  <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('achievements.*') ? 'active' : '' }}"
                         href="{{ route('achievements.index') }}">
                         <div
