@@ -30,6 +30,8 @@
     <link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet')}}" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ asset('css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
@@ -52,7 +54,7 @@
                 aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href="/" >
                 <img src="{{ asset('img/computer.png') }}" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold">Dashboard</span>
+                <span class="ms-1 font-weight-bold">EMS</span>
             </a>
         </div>
         <hr class="horizontal dark mt-0">
@@ -87,28 +89,18 @@
                         <span class="nav-link-text ms-1">Category</span>
                     </a>
                 </li>
-              {{--  <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('achievements.*') ? 'active' : '' }}"
-                        href="{{ route('achievements.index') }}">
+             <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('attendees.*') ? 'active' : '' }}"
+                        href="{{ route('attendees.index') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-trophy text-primary text-sm opacity-10"></i>
+                            <i class="fa-solid fa-person text-primary text-sm opacity-10"></i>
 
                         </div>
-                        <span class="nav-link-text ms-1">Achievements</span>
+                        <span class="nav-link-text ms-1">Attendee</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('resumes.*') ? 'active' : '' }}"
-                        href="{{ route('resumes.index') }}">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
 
-                        </div>
-                        <span class="nav-link-text ms-1">Resume</span>
-                    </a>
-                </li> --}}
             </ul>
         </div>
     </aside>
@@ -138,6 +130,21 @@
         </nav>
 
         @yield('content')
+
+        <footer class="footer pt-3  ">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-lg-between">
+                <div class="col-lg-6 mb-lg-0 mb-4">
+                  <div class="copyright text-center text-sm text-muted text-lg-start">
+                    © <script>
+                      document.write(new Date().getFullYear())
+                    </script>,
+                    made by Satyan Shakya
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
     </main>
 
     @yield('js')

@@ -28,7 +28,7 @@
                                                 <label class="form-control-label">Name</label>
                                                 <input class="form-control" type="text" name="name"
                                                     value="{{ old('name') }}" required>
-                                                    @error('title')
+                                                    @error('name')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>

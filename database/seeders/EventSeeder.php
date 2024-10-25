@@ -9,9 +9,7 @@ use App\Models\Category;
 
 class EventSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
         $categoryIds = Category::pluck('id');
@@ -19,7 +17,7 @@ class EventSeeder extends Seeder
         for ($i = 1; $i <= 5; $i++) {
             Event::create([
                 'title' => 'Event ' . $i,
-                'description' => 'Description for event ' . $i,
+                'description' => 'Description of event ' . $i,
                 'date' => now()->addDays($i),
                 'location' => 'Location ' . $i,
                 'category_id' => $categoryIds->random(),
