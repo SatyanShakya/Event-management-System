@@ -16,7 +16,7 @@ class AttendeeSeeder extends Seeder
         $attendees = [
             ['name' => 'Attendee 1', 'email' => 'attendee1@gmail.com', 'event_id' => 1],
             ['name' => 'Attendee 2', 'email' => 'attendee2@gmail.com', 'event_id' => 1],
-            ['name' => 'Attendee 1', 'email' => 'attendee1@gmail.com', 'event_id' => 2],
+            ['name' => 'Attendee 3', 'email' => 'attendee3@gmail.com', 'event_id' => 2],
         ];
 
         foreach ($attendees as $attendee) {
