@@ -27,7 +27,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Name</label>
                                                 <input class="form-control" type="text" name="name"
-                                                    value="{{ $category->name }}" required>
+                                                    value="{{ $category->name }}" >
                                                 @error('name')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror

@@ -27,7 +27,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Name</label>
                                                 <input class="form-control" type="text" name="name"
-                                                    value="{{ old('name') }}" required>
+                                                    value="{{ old('name') }}">
                                                     @error('name')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -38,7 +38,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Email</label>
                                                 <input class="form-control" type="email" name="email"
-                                                    value="{{ old('email') }}" required>
+                                                    value="{{ old('email') }}" >
                                                     @error('email')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -48,7 +48,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">Event</label>
-                                                <select name="event_id" class="form-select" required>
+                                                <select name="event_id" class="form-select" >
                                                     @foreach ($events as $event)
                                                         <option value="{{ $event->id }}">{{ $event->title }}</option>
                                                     @endforeach

@@ -88,7 +88,7 @@
                                             </td>
                                             <td
                                                 style="max-width: 300px; word-wrap: break-word; white-space: normal; overflow: hidden;">
-                                                <p class="text-xs font-weight-bold mb-0">{{ $event->category_id }}</p>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $event->category->name }}</p>
                                             </td>
 
                                             <td class="align-middle">

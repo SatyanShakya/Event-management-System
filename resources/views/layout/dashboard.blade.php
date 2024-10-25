@@ -52,7 +52,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
                 aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href="/" >
+            <a class="navbar-brand m-0" href="/">
                 <img src="{{ asset('img/computer.png') }}" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold">EMS</span>
             </a>
@@ -79,7 +79,7 @@
                         <span class="nav-link-text ms-1">Event</span>
                     </a>
                 </li>
-                  <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('categories.*') ? 'active' : '' }}"
                         href="{{ route('categories.index') }}">
                         <div
@@ -89,7 +89,7 @@
                         <span class="nav-link-text ms-1">Category</span>
                     </a>
                 </li>
-             <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('attendees.*') ? 'active' : '' }}"
                         href="{{ route('attendees.index') }}">
                         <div
@@ -119,10 +119,19 @@
                     </div>
                     <ul class="navbar-nav  justify-content-end">
                         <li class="nav-item d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
+                            <!-- Hidden Logout Form -->
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                style="display: none;">
+                                @csrf
+                            </form>
+
+                            <!-- Logout Link -->
+                            <a href="{{ route('logout') }}" class="nav-link text-white font-weight-bold px-0"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="fa fa-user me-sm-1"></i>
                                 <span class="d-sm-inline d-none">Logout</span>
                             </a>
+
                         </li>
                     </ul>
                 </div>
@@ -133,18 +142,19 @@
 
         <footer class="footer pt-3  ">
             <div class="container-fluid">
-              <div class="row align-items-center justify-content-lg-between">
-                <div class="col-lg-6 mb-lg-0 mb-4">
-                  <div class="copyright text-center text-sm text-muted text-lg-start">
-                    © <script>
-                      document.write(new Date().getFullYear())
-                    </script>,
-                    made by Satyan Shakya
-                  </div>
+                <div class="row align-items-center justify-content-lg-between">
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                        <div class="copyright text-center text-sm text-muted text-lg-start">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>,
+                            made by Satyan Shakya
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </footer>
+        </footer>
     </main>
 
     @yield('js')

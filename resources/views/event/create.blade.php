@@ -27,7 +27,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Title</label>
                                                 <input class="form-control" type="text" name="title"
-                                                    value="{{ old('title') }}" required>
+                                                    value="{{ old('title') }}">
                                                     @error('title')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -37,30 +37,42 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Description</label>
                                                 <input class="form-control" type="text" name="description"
-                                                    value="{{ old('description') }}" required>
+                                                    value="{{ old('description') }}">
+                                                    @error('description')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">Date</label>
                                                 <input class="form-control" type="date" name="date"
-                                                    value="{{ old('date') }}" required>
+                                                    value="{{ old('date') }}">
+                                                    @error('date')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">Location</label>
-                                                <input type="text" name="location" class="form-control" value="{{ old('location') }}" required>
+                                                <input type="text" name="location" class="form-control" value="{{ old('location') }}">
+                                                @error('location')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">Category</label>
-                                                <select name="category_id" class="form-select" required>
+                                                <select name="category_id" class="form-select">
                                                     @foreach ($categories as $category)
                                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                                     @endforeach
                                                 </select>
+                                                @error('category_id')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
 
                                             </div>
                                         </div>

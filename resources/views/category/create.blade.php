@@ -27,7 +27,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Name</label>
                                                 <input class="form-control" type="text" name="name"
-                                                    value="{{ old('name') }}" required>
+                                                    value="{{ old('name') }}" >
                                                     @error('name')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror

@@ -71,7 +71,7 @@
                                             </td>
                                             <td
                                                 style="max-width: 300px; word-wrap: break-word; white-space: normal; overflow: hidden;">
-                                                <p class="text-xs font-weight-bold mb-0">{{ $attendee->event_id }}</p>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $attendee->event->title }}</p>
                                             </td>
 
                                             <td class="align-middle">

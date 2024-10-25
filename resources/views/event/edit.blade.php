@@ -27,7 +27,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Title</label>
                                                 <input class="form-control" type="text" name="title"
-                                                    value="{{ $event->title }}" required>
+                                                    value="{{ $event->title }}" >
                                                 @error('title')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -37,7 +37,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Description</label>
                                                 <input class="form-control" type="text" name="description"
-                                                    value="{{ $event->description }}" required>
+                                                    value="{{ $event->description }}" >
                                                 @error('description')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -47,7 +47,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Date</label>
                                                 <input class="form-control" type="date" name="date"
-                                                    value="{{ $event->date }}" required>
+                                                    value="{{ $event->date }}" >
                                                 @error('date')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -57,7 +57,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Location</label>
                                                 <input type="text" name="location" class="form-control"
-                                                    value="{{ $event->location }}" required>
+                                                    value="{{ $event->location }}" >
                                                 @error('location')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -66,7 +66,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-control-label">Category</label>
-                                                <select name="category_id" class="form-select" required>
+                                                <select name="category_id" class="form-select" >
                                                     @foreach ($categories as $category)
                                                         <option value="{{ $category->id }}"
                                                             {{ $event->category_id == $category->id ? 'selected' : '' }}>
